@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: kannika
+  name: nginx-config
+data:
+  default.config: |
+    server{
+      listen 80;
+      server_name _;
+      
+      location / {
+        return 200 "Kannika S";
+      }
+    } 
